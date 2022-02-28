@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Overrides -->
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <title>Voysys // Exjobb VT2022</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img class="bi me-2" role="img" src="/static/img/logo.svg" height="32" role="img">
+                <span class="fs-3 me-2">Voysys // Exjobb VT2022 </span>
+            </a>
+        </header>
+    </div>
+
+
+    <div class="px-4 py-5 my-2 text-center">
+        <h1 class="display-5 fw-bold">Examensarbeten hos Voysys VT2022</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+                Voysys är ett litet gäng på fem pers, varav två tidigare MT:are, med kontor i Norrköping på
+                Knäppingsborgsgatan 13B. Vi gör en 3D-motor för low-latency streaming av video över olika trådlösa
+                nätverk (WiFi, 4G, 5G) som används för tele-operation av olika maskiner och fordon.
+                Vi utvecklar främst i C++ och Rust, med grafikdelarna i OpenGL och CUDA. Vår programvara körs på Windows
+                och Linux (inklusive NVIDIA Jetson).
+                Vi har också en broadcast-del som kan sända 360-video till VR-headsets.
+            </p>
+            <p class="lead mb-4">
+                Mer info om vad vi gör på <a href="https://www.voysys.se/">https://www.voysys.se/</a> <br>
+
+                <a href="https://www.youtube.com/watch?v=a0NIGl7m2us">Video från ett projekt nyligen på Red Bull Ring i
+                    Österrike</a>
+            </p>
+
+            <p class="lead mb-2">
+                Vi har lite olika idéer för exjobb som vi gärna bollar vidare kring men är också öppna för förslag!
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+            <div class="col">
+                <div class="card shadow p-3 mb-3">
+                    <div class="card-body m-2">
+                        <h4 class="card-title">Visual Odometry / SLAM / 3D Mapping</h4>
+                        <p class="card-text">
+                            Målet med den här idén är att utveckla ett system som läser in video från
+                            kalibrerade kameror och sen använda det för att i realtid beräkna hur vi rör oss i den
+                            verkliga
+                            världen. Man skulle också kunna bygga upp en 3D-värld när fordonet rör sig. Vi tänker att
+                            det
+                            blir mycket bildbehandling och kanske en del machine learning kombinerad med lite
+                            grafikprogrammering. Utmanande mix av olika grejer MT-studenter är bra på! På Voysys finns
+                            ett
+                            flertal små modell-bilar (rc-bilar skala 1:10, 1:8, 1:5) som med fördel kan användas, för vi
+                            tror det är jättebra att kunna testa och samla data från dag 1 på exjobbet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow p-3 mb-3">
+                    <div class="card-body m-2">
+                        <h4 class="card-title mb-3">High Level UI and 3D Rendering Library</h4>
+                        <p class="card-text">
+                            I vårt nuvarande plugin-system har vi API-anrop för att rita ut primitiver i 3D-världen
+                            (linjer, rektanglar, sfärer osv). Ett problem vi har märkt är att det är svårt att göra
+                            snygga och lite mer komplicerade UI:n med det här systemet. De som skriver pluginet måste
+                            veta hur transformationer i 3D fungerar, hur man kopplar ihop olika primitiver för att göra
+                            mer komplexa saker och så vidare. Vår idé för exjobb här är att utveckla ett nytt
+                            högnivå-API ovanpå det existerande API:et som gör det enklare och snabbare att utveckla mer
+                            komplicerade UI:n och grejer i 3D-världen. Mycket grafikprogramming och en del C++ (eller
+                            Rust).
+                            En intressant aspekt med det här exjobbet är att målgrupper är programmerare, designers och
+                            slutanvändare.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow p-3 mb-3">
+                    <div class="card-body m-2">
+                        <h4 class="card-title">Network Testing and Characterization for Realtime Video Transmission</h4>
+                        <p class="card-text">
+                            Vi på Voysys arbetar med realtidsöverföring av video över en mängd olika nätverk så som 5G,
+                            4G eller dedikerade radionätverk. Nätverken vi kommer i kontakt med fungerar ibland mindre
+                            bra för att föra över realtidsvideo. De befintliga verktygen som används för att testa
+                            nätverk (t ex "iperf") kan ibland ge missvisande data, där de säger att nätverket fungerar
+                            bra men för video fungerar det ändå dåligt. T ex kan throughput vara bra, men att nätverket
+                            buffrar eller tappar paket på ett sätt som skadar videoöverföringen. Det är också en
+                            utmaning för oss när kunder konfigurerar brandväggar eller routrar och det inte alla gånger
+                            blir helt rätt.
+                            Vi skulle vilja utforska om det går att ta fram ett bättre verktyg för att testa,
+                            karaktärisera och visualisera nätverk, som kan finnas allmänt tillgängligt så vi kan skicka
+                            det till våra kunder och de börjar med att köra det verktyget innan de försöker sig på att
+                            installera och konfigurera vår mjukvara för realtidsöverföring av video.
+                            Vi tror att det här projetet kommer innebära spännande utmaningar inom
+                            nätverksprogrammering, datavisualisering, gränssnittsdesign. Vi tror också att
+                            användartester kommer vara en del av projektet. Slutligen ser vi gärna att resultatet blir
+                            öppen källkod, så att resultatet av projektet kan bli användbart av fler än Voysys kunder.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 py-5 my-2 text-center">
+        <div class="col-lg-6 mx-auto">
+            <h2 class="mb-4">
+                Anmäl intresse <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSekE5pe0UgmgK7L-lhRi0O_woUMijFI-6ZE8xdf4Ntxs4oyUw/viewform?usp=sf_link">här!</a>
+            </h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                </a>
+                <span class="text-muted">© 2021 Voysys AB</span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
